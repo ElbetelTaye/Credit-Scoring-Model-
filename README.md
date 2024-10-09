@@ -1,8 +1,6 @@
-# Data Preprocessing Notebook
-
 ## Overview
 
-This repository contains a Jupyter notebook, `scripts/data_preprocessing.ipynb`, designed for preprocessing data before using it for machine learning tasks. The notebook includes steps for data cleaning, transformation, and visualization to prepare the dataset for further analysis or model training.
+This repository contains two Jupyter notebooks, data_preprocessing.ipynb and EDA.ipynb, designed to streamline the data preparation process and perform a comprehensive exploratory data analysis (EDA) before model training. These notebooks help to clean, transform, visualize, and better understand the underlying patterns in the dataset.
 
 ## Prerequisites
 
@@ -33,18 +31,13 @@ To set up the environment for this notebook, follow these steps:
    jupyter notebook
    ```
 
-   Open `scripts/data_preprocessing.ipynb` from the Jupyter interface.
+   Open `scripts/data_preprocessing.ipynb` or `notebook/EDA.ipynb` from the Jupyter interface.
 
 ## Usage
-
-- Open the notebook `scripts/data_preprocessing.ipynb`.
-- Update the file paths and configurations according to your dataset.
-- Run each cell sequentially to preprocess the data.
-- Modify the preprocessing steps as needed based on the dataset you are working with.
-
-## Processes Included
-
-The notebook performs the following data preprocessing steps:
+## Data Preprocessing
+- Notebook: data_preprocessing.ipynb
+- Purpose: Clean and prepare the data for analysis and modeling.
+#### Processes Included: 
 
 1. **Load Data**: Import data from CSV or other file formats.
 2. **Display Basic Information**: Use `info()` to display data types, non-null counts, and memory usage.
@@ -56,6 +49,17 @@ The notebook performs the following data preprocessing steps:
 8. **Handle Missing Values from Invalid Datetime Conversion**: Address any missing values that may arise during datetime conversion.
 9. **Visualize the Cleaned Data**:print out the data.
 10. **Save the Cleaned Data**: Export the cleaned dataset for further analysis or model training.
+
+## Exploratory Data Analysis (EDA)
+- Notebook: EDA.ipynb
+- Purpose: Gain insights into the data's structure, distributions, and relationships between variables to guide modeling decisions.
+#### Processes Included:
+1. Summary statistics of numerical columns.
+2. Distribution analysis using histograms and box plots.
+3. Correlation analysis using heatmaps.
+4. Analysis of categorical variables with count plots and bar charts.
+5. Insights into time-series data trends if applicable.
+6. Identification of outliers and their impact on the dataset.
 
 ## File Structure
 
@@ -74,6 +78,7 @@ The notebook performs the following data preprocessing steps:
 │   └── __init__.py
 ├── notebooks/
 │   ├── __init__.py
+|   └── EDA.ipynb                # Notebook for performing exploratory data analysis
 ├── tests/
 │   └── __init__.py
 ├── scripts/
