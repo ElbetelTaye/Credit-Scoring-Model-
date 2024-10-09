@@ -1,0 +1,4 @@
+panda
+matplotlib
+seaborn
+scorecardpy
