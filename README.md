@@ -103,24 +103,24 @@ The repository is structured as follows:
 ├──app
 │   ├── main.py
 │   └── requirements.txt
-├── .gitignore
-├── requirements.txt
-├── README.md
-├── src/
-│   └── __init__.py
 ├── notebooks/
 │   ├── __init__.py
 │   ├── EDA.ipynb
-│   ├── data_cleaning.ipynb
 │   ├── Feature_Engineering.ipynb
 │   ├── Modelling.ipynb
 │   └── Default_Estimator_and_WOE_Binning.ipynb
-├── tests/
-│   └── __init__.py
 ├── scripts/
 │    ├── __init__.py
+│    ├── data_cleaning.ipynb
+├── src/
+│   └── __init__.py
+├── tests/
+│   └── __init__.py
 ├── Dockerfile
 ├──.dockerignore
+├──.gitignore
+├── README.md
+└── requirements.txt
 
 
 ```
