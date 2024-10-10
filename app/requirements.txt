@@ -1,7 +1,4 @@
 pandas
-matplotlib
-seaborn
-scorecardpy
 scikit-learn
 numpy
 pydantic
