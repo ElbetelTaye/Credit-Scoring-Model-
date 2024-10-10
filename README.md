@@ -1,6 +1,8 @@
+# Data Preprocessing, Exploratory Data Analysis (EDA), and Feature Engineering Notebooks
+
 ## Overview
 
-This repository contains two Jupyter notebooks, data_preprocessing.ipynb and EDA.ipynb, designed to streamline the data preparation process and perform a comprehensive exploratory data analysis (EDA) before model training. These notebooks help to clean, transform, visualize, and better understand the underlying patterns in the dataset.
+This repository contains three Jupyter notebooks—`data_preprocessing.ipynb`, `EDA.ipynb`, and `Feature_Engineering.ipynb`—designed to facilitate data preparation, exploration, and feature engineering for machine learning projects. Together, these notebooks provide a complete workflow for understanding and preparing data before model training.
 
 ## Prerequisites
 
@@ -50,16 +52,28 @@ To set up the environment for this notebook, follow these steps:
 9. **Visualize the Cleaned Data**:print out the data.
 10. **Save the Cleaned Data**: Export the cleaned dataset for further analysis or model training.
 
-## Exploratory Data Analysis (EDA)
-- Notebook: EDA.ipynb
-- Purpose: Gain insights into the data's structure, distributions, and relationships between variables to guide modeling decisions.
-#### Processes Included:
-1. Summary statistics of numerical columns.
-2. Distribution analysis using histograms and box plots.
-3. Correlation analysis using heatmaps.
-4. Analysis of categorical variables with count plots and bar charts.
-5. Insights into time-series data trends if applicable.
-6. Identification of outliers and their impact on the dataset.
+### Exploratory Data Analysis (EDA)
+
+- **Notebook**: `EDA.ipynb`
+- **Purpose**: Gain insights into the data's structure, distributions, and relationships between variables to guide modeling decisions.
+- **Processes Included**:
+  - Summary statistics of numerical columns.
+  - Distribution analysis using histograms and box plots.
+  - Correlation analysis using heatmaps.
+  - Analysis of categorical variables with count plots and bar charts.
+  - Insights into time-series data trends if applicable.
+  - Identification of outliers and their impact on the dataset.
+
+### Feature Engineering
+
+- **Notebook**: `Feature_Engineering.ipynb`
+- **Purpose**: Create new features that enhance the predictive power of the model.
+- **Processes Included**:
+  - Create Aggregate features
+  - Extract time based features
+  - Encode Categorical Variables using WOE
+  - Handle Missing Values
+  - Normalize/Standardize Numerical Features
 
 ## File Structure
 
@@ -78,12 +92,13 @@ To set up the environment for this notebook, follow these steps:
 │   └── __init__.py
 ├── notebooks/
 │   ├── __init__.py
-|   └── EDA.ipynb                # Notebook for performing exploratory data analysis
+│   ├── EDA.ipynb                # Notebook for performing exploratory data analysis
+|   └── Feature_Engineering.ipynb # Notebook for feature engineering processes
 ├── tests/
 │   └── __init__.py
 ├── scripts/
     ├── __init__.py
-    └── data_preprocessing.ipynb                       # The main notebook for data preprocessing
+    └── data_preprocessing.ipynb        # The main notebook for data preprocessing
 
 ```
 ## Contributing

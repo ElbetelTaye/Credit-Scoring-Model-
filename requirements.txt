@@ -1,1 +1,8 @@
-pandas
+panda
+matplotlib
+seaborn
+scorecardpy
+scikit-learn
+numpy
+pickle
+
