@@ -1,8 +1,8 @@
-# Data Preprocessing, Exploratory Data Analysis (EDA), and Feature Engineering Notebooks
+# Data Preprocessing, Exploratory Data Analysis (EDA), Feature Engineering Notebooks, and ML Model training
 
 ## Overview
 
-This repository contains three Jupyter notebooks—`data_preprocessing.ipynb`, `EDA.ipynb`, and `Feature_Engineering.ipynb`—designed to facilitate data preparation, exploration, and feature engineering for machine learning projects. Together, these notebooks provide a complete workflow for understanding and preparing data before model training.
+This project focuses on developing a Credit Scoring Model for a buy-now-pay-later service in partnership with an eCommerce company. The dataset contains transaction records, and the aim is to analyze the data and engineer relevant features that will help in predicting credit risk.
 
 ## Prerequisites
 
@@ -64,43 +64,67 @@ To set up the environment for this notebook, follow these steps:
   - Insights into time-series data trends if applicable.
   - Identification of outliers and their impact on the dataset.
 
-### Feature Engineering
+#### Feature_Engineering
 
-- **Notebook**: `Feature_Engineering.ipynb`
-- **Purpose**: Create new features that enhance the predictive power of the model.
-- **Processes Included**:
-  - Create Aggregate features
-  - Extract time based features
-  - Encode Categorical Variables using WOE
-  - Handle Missing Values
-  - Normalize/Standardize Numerical Features
+This notebook focuses on feature engineering to enhance the dataset for modeling. Key tasks include:
+- **Aggregate Features**: Creating new features such as total transaction amount, average transaction amount, transaction count, and standard deviation of transaction amounts for each customer.
+- **Time-Based Features**: Extracting features from the transaction timestamp (hour, day, month, year).
+- **Encoding Categorical Variables**: Applying Weight of Evidence (WOE) transformation to categorical features for better model interpretability.
+- **Handling Missing Values**: Implementing strategies for filling or removing missing values in the dataset.
+- **Normalization/Standardization**: Scaling numerical features to ensure they are on a similar scale, improving model performance.
+#### Default_Estimator_and_WOE_Binning
+
+This notebook focuses on feature engineering using the RFMS (Recency, Frequency, Monetary, Seniority) formalism and applying Weight of Evidence (WoE) binning for customer risk classification. The main steps include:
+ - **RFMS Feature Engineering**: Calculating Recency, Frequency, Monetary, and Seniority features from the transaction data.
+ - **Risk Label Assignment**: Classifying customers as 'good' or 'bad' based on their RFMS score.
+ - **WoE Binning**: Transforming RFMS features using WoE based on the RiskLabel.
+ - **Information Value (IV) Calculation**: Evaluating the importance of each RFMS feature using IV to assess predictive power.
+
+#### Model Training
+
+This notebook trains the machine learning models:
+ - **Model Selection**: Random Forest and Gradient Boosting Machines.
+ - **Data Splitting**: Dividing data into training and testing sets.
+ - **Model Training**: Fitting the models to training data.
+ - **Hyperparameter Tuning**: Optimizing models using Grid and Random Search.
+ - **Overfitting Prevention**: Using cross-validation and regularization techniques.
+ - **Model Evaluation**: Assessing metrics like Accuracy, Precision, Recall, F1 Score, and ROC-AUC.
 
 ## File Structure
 
+The repository is structured as follows:
+
 ```
-.
-|-- data/                     # Directory to store raw and processed data. It is included in gitignore
 ├── .vscode/
 │   └── settings.json
 ├── .github/
 │   └── workflows/
 │       └── unittests.yml
-├── .gitignore
-├── requirements.txt
-├── README.md
-├── src/
-│   └── __init__.py
+├──app
+│   ├── main.py
+│   └── requirements.txt
 ├── notebooks/
 │   ├── __init__.py
-│   ├── EDA.ipynb                # Notebook for performing exploratory data analysis
-|   └── Feature_Engineering.ipynb # Notebook for feature engineering processes
+│   ├── EDA.ipynb
+│   ├── Feature_Engineering.ipynb
+│   ├── Modelling.ipynb
+│   └── Default_Estimator_and_WOE_Binning.ipynb
+├── scripts/
+│    ├── __init__.py
+│    ├── data_cleaning.ipynb
+├── src/
+│   └── __init__.py
 ├── tests/
 │   └── __init__.py
-├── scripts/
-    ├── __init__.py
-    └── data_preprocessing.ipynb        # The main notebook for data preprocessing
+├── Dockerfile
+├──.dockerignore
+├──.gitignore
+├── README.md
+└── requirements.txt
+
 
 ```
+
 ## Contributing
 
 If you would like to contribute to this project:

@@ -1,8 +1,8 @@
-panda
+pandas
 matplotlib
 seaborn
 scorecardpy
 scikit-learn
 numpy
-pickle
-
+pydantic
+fastapi
